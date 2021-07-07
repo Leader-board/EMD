@@ -1,0 +1,5 @@
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\bin\Release\MNISTExtractor.exe
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\bin\Release\MNISTExtractor.pdb
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Release\MNISTExtractor.csproj.CoreCompileInputs.cache
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Release\MNISTExtractor.exe
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Release\MNISTExtractor.pdb

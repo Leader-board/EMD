@@ -1,0 +1,6 @@
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\bin\Debug\MNISTExtractor.exe
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\bin\Debug\MNISTExtractor.pdb
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Debug\MNISTExtractor.csprojAssemblyReference.cache
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Debug\MNISTExtractor.csproj.CoreCompileInputs.cache
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Debug\MNISTExtractor.exe
+C:\Users\vishn\OneDrive - University of St Andrews\EMD2\MNISTExtractor\obj\Debug\MNISTExtractor.pdb
