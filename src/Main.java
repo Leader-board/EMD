@@ -5,6 +5,7 @@ import org.jgrapht.alg.interfaces.MinimumCostFlowAlgorithm;
 import org.jgrapht.graph.DefaultDirectedWeightedGraph;
 import org.jgrapht.graph.DefaultWeightedEdge;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -115,7 +116,7 @@ public class Main {
         }
         return minimumCostFlow.getCost()/flowcost;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 	// write your code here
 //    int[] vertices = new int[]{1, 2};
 //    int[][] edges = new int[][]{{1,2}};
@@ -130,5 +131,6 @@ public class Main {
       int[][] demand = new int[][]{{4, 5}};
       int[] capacity = new int[]{4,1,1,5,4};
     System.out.println(getEMD(vertices, edges, edge_weights, supply, demand, capacity));
+    image_data.core();
     }
 }
