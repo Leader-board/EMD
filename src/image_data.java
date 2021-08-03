@@ -7,9 +7,9 @@ public class image_data {
          this is in the form of two 2-D integer arrays, which we will define as int[][] image1 and int[][] image2
          */
         // int[][] image1 = new int[][]{{23,42},{9,12}};
-        int[][] image1 = get_grayscale.getGrayscale("../testimage1.png");
+        int[][] image1 = get_grayscale.getGrayscale("C:\\Users\\vishn\\OneDrive - University of St Andrews\\EMD2\\MNISTExtractor\\Extracted images\\test set\\1\\2.png");
        // int[][] image2 = new int[][]{{44,25},{92,1}};
-        int[][] image2 = get_grayscale.getGrayscale("../testimage2.png");
+        int[][] image2 = get_grayscale.getGrayscale("C:\\Users\\vishn\\OneDrive - University of St Andrews\\EMD2\\MNISTExtractor\\Extracted images\\test set\\1\\5.png");
         // normalise them first (to double arrays)
         double[][] imagen1 = new double[image1.length][image1[0].length];
         double[][] imagen2 = new double[image2.length][image2[0].length];
@@ -64,6 +64,8 @@ public class image_data {
         int[][] demandarr = new int[demandnum][2];
         int supplyptr = 0;
         int demandptr = 0;
+        double supplydoub = 0;
+        double demanddoub = 0;
         for (int i = 0; i < comp.length; i++)
         {
             for (int j = 0; j < comp[0].length; j++)
@@ -71,17 +73,30 @@ public class image_data {
                 if (comp[i][j] > 0)
                 {
                     supplyarr[supplyptr][0] = (1000*i + j); // hack for vertex number
-                    supplyarr[supplyptr][1] = (int) (1000*comp[i][j]); // normalise to 1000 for now
+                    supplyarr[supplyptr][1] = (int) (1000000*comp[i][j]); // normalise to 1000 for now
                     supplyptr++;
+                    supplydoub+=comp[i][j];
                 }
                 else if (comp[i][j] < 0)
                 {
                     demandarr[demandptr][0] = (1000*i + j); // hack for vertex number
-                    demandarr[demandptr][1] = (-1)*(int)(1000*comp[i][j]); // normalise to 1000 for now
+                    demandarr[demandptr][1] = (-1)*(int)(1000000*comp[i][j]); // normalise to 1000 for now
                     demandptr++;
+                    demanddoub+=comp[i][j];
                 }
             }
         }
+        int supplysum = 0;
+        int demandsum = 0;
+        for (int[] ints : supplyarr) supplysum += ints[1];
+        for (int[] ints : demandarr) demandsum += ints[1];
+        if (supplysum != demandsum)
+        {
+            // temporary hack to allow the algorithm to run
+            supplyarr[supplyarr.length - 1][1] -= (supplysum - demandsum);
+        }
+
+        System.out.println("Supplysum = " + supplysum + " and demandsum is " + demandsum + " while supplydoub is " + supplydoub + " and demanddoub is " + demanddoub);
         // next step is to define the vertices themselves and the edge. Complete graph
         int R = comp.length;
         int[] vertices = new int[comp.length * comp[0].length];
